@@ -11,7 +11,7 @@ export default function Hero() {
             height={900}
             alt='Hero Image'
         />
-        <div className='hidden sm:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white w-auto h-auto spave-y-3 lg:space-y-6 p-6 xl:space-y-8 rounded-sm shadow-2xl'>
+        <div className='hidden sm:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white w-auto h-auto space-y-3 p-6 rounded-sm shadow-2xl'>
           <h2 className='text-[22px] lg:text-[30px] xl:text-[40px] leading-tight'>
             Impossible is nothing
           </h2>
