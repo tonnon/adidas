@@ -28,7 +28,7 @@ const festureCardsList = [
 export default function Feature() {
   return (
     <div className='container pt-16'>
-        <div className='grid md:grid-cols-2 grap-y-8 lg:gap-y-4 lg:grid-cols-3 gap-4'>
+        <div className='flex flex-wrap justify-between md:flex-cols-2 gap-y-8 lg:gap-y-4 lg:flex-cols-3 gap-8'>
             {festureCardsList.map((card) => (
                 <FeatureCard 
                     key={card.title}

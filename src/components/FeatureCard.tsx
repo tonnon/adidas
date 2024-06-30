@@ -12,7 +12,7 @@ export default function FeatureCard({
     desc,
 }:FeatureCardProps) {
   return (
-    <div className='flex gap-9 items-center'>
+    <div className='flex gap-6 items-center'>
         <div className='w-auto'>
             {icon}
         </div>
