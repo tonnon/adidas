@@ -1,11 +1,11 @@
 import React from 'react'
 
+import FeatureCard from './FeatureCard';
 import { GiClothes } from "react-icons/gi";
 import { 
     FaShippingFast,
-    FaAddressCard 
+    FaAddressCard,
  } from "react-icons/fa";
-import FeatureCard from './FeatureCard';
 
 const festureCardsList = [
     {
