@@ -10,6 +10,7 @@ export default function NewArrival() {
     const handleArrival = (index: number) => {
         setSelectedArrival(index);
     }
+    
   return (
     <div className='container pt-32'>
         <div className='text-center'>
@@ -30,6 +31,9 @@ export default function NewArrival() {
                     </li>
                 ))}
             </ul>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pt-8'>
+                
+            </div>
         </div>
     </div>
   )
