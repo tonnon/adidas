@@ -7,12 +7,11 @@ import {
     AiOutlineStar,
 } from 'react-icons/ai';
 
-interface ProductCardProps {
+export interface ProductCardProps {
     id: number;
     img: string;
     name: string;
     price: number;
-    category: string[];
     sale: boolean | undefined;
 }
 
@@ -21,9 +20,79 @@ export default function ProductCard({
     img,
     name,
     price,
-    category,
     sale,
 }:ProductCardProps) {
+    const getRating = () => {
+        const randomNumber = (min: number, max: number) => {
+            return Math.ceil(Math.random() * (max - min) + min)
+        };
+
+        switch (randomNumber(0,5)) {
+            case 0:
+                return (
+                    <div className='flex justify-center text-accent pt-4 pb-2'>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                    </div>
+                );
+            case 1:
+                return (
+                    <div className='flex justify-center text-accent pt-4 pb-2'>
+                        <AiFillStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                    </div>
+                );
+            case 2:
+                return (
+                    <div className='flex justify-center text-accent pt-4 pb-2'>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                    </div>
+                );
+            case 3:
+                return (
+                    <div className='flex justify-center text-accent pt-4 pb-2'>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiOutlineStar/>
+                        <AiOutlineStar/>
+                    </div>
+                );
+            case 4:
+                return (
+                    <div className='flex justify-center text-accent pt-4 pb-2'>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiOutlineStar/>
+                    </div>
+                );
+            case 5:
+                return (
+                    <div className='flex justify-center text-accent pt-4 pb-2'>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                        <AiFillStar/>
+                    </div>
+                );
+            default:
+                return <div></div>
+        }
+    }
+
   return (
     <div className='group cursor-pointer'>
         <div className="relative">
@@ -50,7 +119,8 @@ export default function ProductCard({
                 </div>
             </div>
         </div>
-        <h2 className='font-medium pb-3 hover:text-accent'>
+        {getRating()}
+        <h2 className='font-medium hover:text-accent'>
             {name}
         </h2>
         <p className='text-gray-600 font-light'>
